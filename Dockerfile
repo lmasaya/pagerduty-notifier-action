@@ -10,3 +10,4 @@ RUN \
 
 FROM scratch
 COPY --from=build /bin/pd /bin/pd
+ENTRYPOINT ["/bin/pd"]
