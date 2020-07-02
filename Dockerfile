@@ -10,4 +10,4 @@ RUN \
 FROM alpine:3.12
 COPY --from=build /bin/pd /bin/pd
 
-ENTRYPOINT["/bin/pd"]
+ENTRYPOINT ["/bin/pd"]
