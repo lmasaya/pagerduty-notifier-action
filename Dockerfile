@@ -5,7 +5,7 @@ RUN \
   go get github.com/PagerDuty/go-pagerduty && \
   cd $GOPATH/src/github.com/PagerDuty/go-pagerduty && \
   go get && go mod verify && go mod vendor && \
-  CGO_ENABLED=0 go build -a -tags netgo -ldflags '-w -extldflags "-static"' -mod=vendor -o /bin/pd ./command && \
+  CGO_ENABLED=0 go build -tags netgo -ldflags '-w -extldflags "-static"' -mod=vendor -o /bin/pd ./command && \
   chmod +x /bin/pd
 
 FROM scratch
