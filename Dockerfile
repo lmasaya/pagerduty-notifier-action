@@ -13,7 +13,7 @@ RUN \
 FROM scratch
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /bin/pd /bin/pd
-COPY --from=build /bin/sh /bin/sh
+
 ADD files/ /
 
 ENTRYPOINT ["/bin/pd"]
