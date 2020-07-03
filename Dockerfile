@@ -1,7 +1,5 @@
 FROM golang:1.14-alpine AS build
 
-ADD files/ /
-
 RUN \
   apk update && \
   apk --no-cache add git build-base ca-certificates && \
@@ -15,4 +13,7 @@ RUN \
 FROM scratch
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /bin/pd /bin/pd
+COPY --from=build /bin/sh /bin/sh
+ADD files/ /
+
 ENTRYPOINT ["/bin/pd"]
