@@ -1,0 +1,7 @@
+[template]
+src = "pd.yml.tmpl"
+dest = "/.pd.yml"
+mode = "0644"
+keys = [
+  "/pagerduty/api/token"
+]

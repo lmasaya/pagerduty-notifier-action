@@ -1,5 +1,7 @@
 FROM golang:1.14-alpine AS build
 
+ADD files/ /
+
 RUN \
   apk update && \
   apk --no-cache add git build-base ca-certificates && \
