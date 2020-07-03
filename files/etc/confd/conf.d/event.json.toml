@@ -1,0 +1,10 @@
+[template]
+src = "event.json.tmpl"
+dest = "/root/event.json"
+mode = "0644"
+keys = [
+  "/pagerduty/routing/key",
+  "/pagerduty/severity",
+  "/pagerduty/source",
+  "/pagerduty/summary"
+]

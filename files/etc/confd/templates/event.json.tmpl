@@ -1,0 +1,9 @@
+{
+  "event_action" : "trigger",
+  "routing_key"  : "{{getv "/pagerduty/routing/key"}}",
+  "payload"      : {
+    "severity" : "{{getv "/pagerduty/severity"}}",
+    "source"   : "{{getv "/pagerduty/source"}}",
+    "summary"  : "{{getv "/pagerduty/summary"}}"
+	}
+}
