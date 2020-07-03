@@ -25,10 +25,10 @@ RUN \
   rm -rf /tmp/v${CONFD_VERSION}.tar.gz && \
   chmod +x /bin/confd
 
-FROM scratch
+FROM alpine:3.12
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /bin/pd /bin/pd
 COPY --from=build /bin/confd /bin/confd
 ADD files/ /
 
-ENTRYPOINT ["/bin/pd"]
+ENTRYPOINT ["/bin/entrypoint.sh"]
