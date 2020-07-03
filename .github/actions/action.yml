@@ -5,5 +5,4 @@ branding:
   icon: 'alert-circle'
   color: 'green'
 runs:
-  using: 'docker'
-  image: 'docker://lmasaya/pagerduty-notifier:0.1.6'
+  uses: 'docker://lmasaya/pagerduty-notifier:0.1.6'
