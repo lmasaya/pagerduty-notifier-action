@@ -1,5 +1,9 @@
 name: 'PagerDuty Notifier'
+author: 'Luis Masaya'
 description: 'Send alert notification to PagerDuty on Pull Request'
+branding:
+  icon: 'alert-circle'
+  color: 'green'
 inputs:
   severity:
     description: 'Level of severity of the alert (warning, critical, etc)'
