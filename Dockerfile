@@ -1,5 +1,7 @@
 FROM golang:1.14-alpine AS build
 
+LABEL maintainer="lmasaya@gmail.com"
+
 ARG CONFD_VERSION=0.16.0
 
 ADD https://github.com/kelseyhightower/confd/archive/v${CONFD_VERSION}.tar.gz /tmp/
