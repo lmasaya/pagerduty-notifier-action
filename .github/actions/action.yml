@@ -6,4 +6,4 @@ branding:
   color: 'green'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://lmasaya/pagerduty-notifier:0.1.5'
