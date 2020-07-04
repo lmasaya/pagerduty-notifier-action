@@ -1,4 +1,4 @@
-name: 'PagerDuty Notifier'
+name: 'PagerDuty Pull Request Notifier'
 author: 'Luis Masaya'
 description: 'Send alert notification to PagerDuty on Pull Request'
 branding:
