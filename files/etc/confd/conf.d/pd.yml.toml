@@ -1,6 +1,6 @@
 [template]
 src = "pd.yml.tmpl"
-dest = "/root/.pd.yml"
+dest = "/github/home/.pd.yml"
 mode = "0644"
 keys = [
   "/pagerduty/api/token"
