@@ -1,6 +1,4 @@
 name: Docker Image CI
-author: 'Luis Masaya'
-description: 'Build, tag and push published image to DockerHub'
 on:
   release:
     types: [published]
