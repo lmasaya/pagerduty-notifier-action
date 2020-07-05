@@ -1,0 +1,23 @@
+name: Docker Image CI
+author: 'Luis Masaya'
+description: 'Build, tag and push published image to DockerHub'
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to DockerHub registry
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets. DOCKERHUB_USERNAME }} --password-stdin
+      - name: Get the version
+        id: vars
+        run: echo ::set-output name=version::$(echo ${GITHUB_REF:10})
+      - name: Build the tagged Docker image using variable
+        run: docker build . --file Dockerfile --tag ${GITHUB_REPOSITORY}:${{steps.vars.outputs.version}}
+      - name: Also tag as latest
+        run: docker tag ${GITHUB_REPOSITORY}:${{steps.vars.outputs.version}} ${GITHUB_REPOSITORY}:latest
+      - name: Publish Image
+        run: docker push ${GITHUB_REPOSITORY}
