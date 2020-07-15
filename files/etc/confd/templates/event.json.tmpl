@@ -5,5 +5,11 @@
     "severity" : "{{getv "/pagerduty/severity"}}",
     "source"   : "{{getv "/pagerduty/source"}}",
     "summary"  : "{{getv "/pagerduty/summary"}}"
-	}
+	},
+  "links": [
+    {
+      "href": "{{getv "/pagerduty/source/url"}}",
+      "text": "Pull Request URL"
+    }
+  ]
 }

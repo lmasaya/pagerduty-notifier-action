@@ -6,5 +6,6 @@ keys = [
   "/pagerduty/routing/key",
   "/pagerduty/severity",
   "/pagerduty/source",
+  "/pagerduty/source/url",
   "/pagerduty/summary"
 ]
