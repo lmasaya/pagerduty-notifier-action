@@ -18,6 +18,7 @@ jobs:
           PAGERDUTY_ROUTING_KEY: ${{ secrets.PAGERDUTY_ROUTING_KEY }}
           PAGERDUTY_SEVERITY: 'warning'
           PAGERDUTY_SOURCE: ${{ github.repository }}
+          PAGERDUTY_SOURCE_URL: ${{ github.event.pull_request.html_url }}
           PAGERDUTY_SUMMARY: ${{ github.actor }} created Pull Request on ${{ github.repository }}
 ```
 
